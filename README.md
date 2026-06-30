@@ -10,7 +10,7 @@ Code to reproduce **RefQA**, a million-scale cross-document clinical citation-ev
 | Parse | `pipeline/parse/parse_pmc_jats.py` | Extract citations + IMRaD structure from JATS XML |
 | Index | `pipeline/index/build_pubmed_lookup.py`, `build_icite_lookup.py` | Build slim PubMed + iCite lookup tables |
 | Enrich | `pipeline/pilot/enrich_full_clinical.py` | Double-clinical filter + join cited abstract/metadata |
-| Extract | `pipeline/pilot/extract_qa_glm_v03.py` | GLM CitationQA extraction (system prompt + Pydantic schema — authoritative) |
+| Extract | `pipeline/pilot/extract_qa_glm_v03.py` | GLM CitationQA extraction (system prompt + Pydantic schema; authoritative) |
 | Dedupe | `pipeline/dedupe_v03.py` | Collapse to canonical records |
 | Gold | `pipeline/sample_gold_1000.py` | Stratified 1,000-record gold sample |
 | Split | `pipeline/make_splits.py` | Deterministic train/val/test/gold splits |
