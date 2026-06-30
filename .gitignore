@@ -1,0 +1,18 @@
+# secrets / credentials — never commit
+.env
+.env.*
+**/auth.json
+*secret*
+*credentials*
+
+# caches / generated
+*.sqlite
+__pycache__/
+*.pyc
+
+# data (kept out of the code repo)
+data/
+dist/
+*.jsonl
+*.parquet
+*.tsv
