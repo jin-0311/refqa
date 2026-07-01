@@ -2,6 +2,10 @@
 
 Code to reproduce **RefQA**, a million-scale cross-document clinical citation-evidence Q&A dataset built from PubMed Central. This repository contains the **data-construction pipeline only**. The dataset itself is deposited on Zenodo (DOI: 10.5281/zenodo.20805692) and described in the companion *Scientific Data* Data Descriptor.
 
+## Using the released dataset
+
+If you want to **use** the dataset (rather than reproduce it from scratch), start with [`using_refqa_dataset.ipynb`](using_refqa_dataset.ipynb): downloading the files from Zenodo, loading the permissive/full Parquet, and the main use cases (citation-grounded QA, claim-evidence faithfulness, hallucination detection, and SFT).
+
 ## Pipeline stages
 
 | Stage | Script | Purpose |
