@@ -6,6 +6,10 @@ Code to reproduce **RefQA**, a million-scale cross-document clinical citation-ev
 
 If you want to **use** the dataset (rather than reproduce it from scratch), start with [`using_refqa_dataset.ipynb`](using_refqa_dataset.ipynb): downloading the files from Zenodo, loading the permissive/full Parquet, and the main use cases (citation-grounded QA, claim-evidence faithfulness, hallucination detection, and SFT).
 
+## Fine-tuned model
+
+A LoRA adapter fine-tuned on RefQA is released on the Hugging Face Hub: [`taejoon89/refqa`](https://huggingface.co/taejoon89/refqa). It fine-tunes `google/gemma-3-27b-it` (r=64) on a medical-instruction + RefQA mix, generates structured CitationQA JSON from a citation context, and retains general medical QA ability (PubMedQA 74.10%, MedQA 24.59%). Load the gated base and apply the adapter with `peft`; the model card includes a runnable usage demo (`demo_refqa_gemma3_v07.ipynb`). Research artifact, not for clinical use.
+
 ## Pipeline stages
 
 | Stage | Script | Purpose |
